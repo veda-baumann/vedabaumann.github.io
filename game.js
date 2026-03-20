@@ -125,7 +125,36 @@ canvas.addEventListener("drop", (e) => {
     spawnPieces();
   }
 });
+piece.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  // Store the piece being dragged
+  currentTouchPiece = piece;
+});
 
+document.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+  // Optionally move a preview of the piece along with the finger
+});
+
+canvas.addEventListener("touchend", (e) => {
+  e.preventDefault();
+  const touch = e.changedTouches[0];
+  const rect = canvas.getBoundingClientRect();
+  const x = touch.clientX - rect.left;
+  const y = touch.clientY - rect.top;
+
+  const shape = currentTouchPiece.shape; // store shape on touchstart
+  const gridX = Math.floor(x / CELL) - Math.floor(shape[0].length / 2);
+  const gridY = Math.floor(y / CELL) - Math.floor(shape.length / 2);
+
+  if (canPlace(shape, gridX, gridY)) {
+    placeShape(shape, gridX, gridY);
+    const linesCleared = clearLines();
+    updateScore(5 + linesCleared * 10);
+    drawBoard();
+    spawnPieces();
+  }
+});
 function canPlace(shape, x, y) {
   for (let r = 0; r < shape.length; r++) {
     for (let c = 0; c < shape[r].length; c++) {
