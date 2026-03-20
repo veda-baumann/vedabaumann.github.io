@@ -1,0 +1,687 @@
+/* ==================================================================================
+   MIS 2201 PHASE 1: PERSONAL WEBSITE STYLESHEET
+   ==================================================================================
+   
+   FILE: style.css
+   PURPOSE: Main stylesheet for your personal portfolio website
+   
+   WHAT THIS FILE DOES:
+   - Controls all visual styling (colors, fonts, layouts, spacing)
+   - Makes your website responsive (looks good on phones, tablets, desktops)
+   - Creates animations and interactive effects
+   - Ensures consistent design across all pages
+   
+   ================================================================================== 
+   
+   CSS BASICS FOR STUDENTS
+   ==================================================================================
+   
+   CSS (Cascading Style Sheets) controls how your HTML looks. It uses "selectors"
+   to target HTML elements and apply styles to them.
+   
+   ANATOMY OF A CSS RULE:
+   ```
+   selector {
+       property: value;
+       another-property: another-value;
+   }
+   ```
+   
+   EXAMPLE:
+   ```
+   h1 {
+       color: red;
+       font-size: 24px;
+   }
+   ```
+   This makes all <h1> headings red and 24 pixels tall.
+   
+   ================================================================================== 
+   
+   ✏️ CUSTOMIZING THIS STYLESHEET
+   ==================================================================================
+   
+   YOU DON'T NEED TO MODIFY THIS FILE TO COMPLETE THE PROJECT!
+   
+   However, if you want to customize your website's appearance, here are the
+   easiest ways to do it:
+   
+   1. CHANGE COLORS (See CSS Variables section below)
+      - Scroll down to :root { } section
+      - Change the color values
+      - Example: Change --primary-color from #7a0019 to #ff0000 for red
+   
+   2. CHANGE FONTS
+      - Find the --font-primary and --font-heading variables
+      - Replace with different font families
+      - Example: --font-primary: 'Arial', sans-serif;
+   
+   3. ADJUST SPACING
+      - Modify the --spacing variables to make things closer or further apart
+   
+   4. CHANGE BORDER RADIUS
+      - Adjust --radius variables to make corners more or less rounded
+   
+   Make changes carefully and test in your browser after each change!
+   
+   ================================================================================== 
+   
+   🎨 CSS VARIABLES (Custom Properties)
+   ==================================================================================
+   
+   CSS Variables let you define values once and reuse them throughout the file.
+   This makes it easy to change colors, fonts, or spacing in one place.
+   
+   HOW TO USE:
+   - Define: --variable-name: value; (in :root)
+   - Use: var(--variable-name) anywhere in the file
+   
+   EXAMPLE:
+   ```
+   :root {
+       --my-color: blue;
+   }
+   
+  h1 {
+      color: var(--my-color);  (h1 will be blue)
+  }
+  ```
+
+  TIP: Change the values below to customize your entire website's look!
+
+==================================================================================*/
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    /* Colors - Customize these! */
+    --primary-color: #7a0019;
+    /* UMD Maroon */
+    --secondary-color: #ffcc33;
+    /* UMD Gold */
+    --accent-color: #2563eb;
+    /* Blue accent */
+    --text-primary: #1f2937;
+    /* Dark gray */
+    --text-secondary: #6b7280;
+    /* Medium gray */
+    --background: #ffffff;
+    /* White */
+    --background-light: #f9fafb;
+    /* Light gray */
+    --border-color: #e5e7eb;
+    /* Border gray */
+
+    /* Fonts */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Georgia', serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-sm) 0;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.nav-menu a {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+.page-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: white;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a0013;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: #e6b800;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.btn-download {
+    background-color: var(--accent-color);
+    color: white;
+    margin-top: var(--spacing-sm);
+}
+
+.btn-download:hover {
+    background-color: #1d4ed8;
+    text-decoration: none;
+}
+
+/* ===== GRIDS ===== */
+.hobby-grid,
+.highlights-grid,
+.reasons-grid,
+.facts-grid,
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* ===== CARDS ===== */
+.hobby-card,
+.reason-card,
+.highlight-item,
+.company-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover,
+.reason-card:hover,
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hobby-card img,
+.highlight-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.reason-card .icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===== VIDEO CONTAINERS ===== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: var(--spacing-md) auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== RESUME SPECIFIC ===== */
+.resume-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.resume-item {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resume-item:last-child {
+    border-bottom: none;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--spacing-xs);
+}
+
+.item-header h3 {
+    margin-bottom: 0;
+}
+
+.date {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.institution {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.resume-item ul {
+    margin-left: var(--spacing-md);
+}
+
+.resume-item li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.skill-category {
+    background: var(--background-light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+/* ===== COMPANIES (About Page) ===== */
+.company-card {
+    margin-bottom: var(--spacing-md);
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.company-details h4 {
+    margin-top: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.company-details ul {
+    margin-left: var(--spacing-md);
+}
+
+/* ===== HOBBY DETAILS (About Page) ===== */
+.hobby-detail {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.hobby-detail:last-child {
+    border-bottom: none;
+}
+
+.hobby-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
+}
+
+.hobby-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+/* ===== UMD FACTS ===== */
+.facts-grid {
+    text-align: center;
+}
+
+.fact {
+    padding: var(--spacing-md);
+}
+
+.fact-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.fact-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ===== CTA SECTION ===== */
+.cta {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+}
+
+.cta h2,
+.cta p {
+    color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--text-primary);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+
+    /* Mobile navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: var(--spacing-md) 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Grid adjustments */
+    .hobby-grid,
+    .highlights-grid,
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Header adjustments */
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+    }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-2 {
+    margin-top: var(--spacing-md);
+}
+
+.mt-3 {
+    margin-top: var(--spacing-lg);
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}

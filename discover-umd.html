@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!-- ==================================================================================
+     MIS 2201 PHASE 1: PERSONAL WEBSITE - DISCOVER UMD PAGE
+     ==================================================================================
+     
+     FILE: discover-umd.html (DISCOVER UMD PAGE)
+     DUE: March 20, 2026, 11:00 AM
+     POINTS: 5 pts (out of 22 pts for Required Pages Content) + 8 pts for Team Video
+     TOTAL IMPACT: 13 pts (5 for page content + 8 for team video!)
+     
+     REQUIREMENTS FOR THIS PAGE:
+     ✓ Why you chose UMD
+     ✓ What you like about Duluth
+     ✓ Campus highlights and experiences
+     ✓ Pictures of campus/Duluth area  
+     * EMBEDDED TEAM UMD VIDEO (30+ seconds) -- CRITICAL! Worth 8 pts!
+    
+     IMPORTANT: TEAM VIDEO
+     This page includes your TEAM's 30+ second UMD marketing video.
+     - Worth 8 points (largest single component!)
+     - Created by your 5-person team
+     - ALL team members use the SAME video
+     - Must be embedded on this page
+     
+     ================================================================================== -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover UMD - [YOUR NAME]'s experience at University of Minnesota Duluth">
+
+    <title>Veda Baumann - Discover UMD | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    Veda Baumann
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="discover-umd.html">Discover UMD</a></li>
+              
+                <li><a href="game.html">Game</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Discover UMD</h1>
+            <p>Learn why the University of Minnesota Duluth and the city of Duluth are special</p>
+        </div>
+    </header>
+
+    <!-- =============================================================================
+         TEAM UMD MARKETING VIDEO
+         =============================================================================
+         CRITICAL REQUIREMENT - Worth 8 POINTS! (Largest single component)
+         
+         TEAM VIDEO REQUIREMENTS:
+         ✓ At least 30 seconds in length
+         ✓ Created by your 5-person TEAM (same team as Phase 2)
+         ✓ Promoted UMD - highlights campus life, academics, student activities, or Duluth
+         ✓ ALL team members embed the SAME video on their individual websites
+         ✓ Must be embedded on this page (not just linked)
+         
+         VIDEO CONTENT IDEAS:
+         - Campus tour showing iconic buildings and locations
+         - Student testimonials about why they love UMD
+         - Duluth attractions and scenery
+         - Academic programs and opportunities
+         - Student life and activities
+         - Mix of the above!
+         
+         PRODUCTION TIPS:
+         - Use smartphone camera (quality is fine!)
+         - Good lighting (daytime outdoor shots work best)
+         - Stable footage (use tripod or steady hands)
+         - Clear audio (limit background noise)
+         - Simple editing (free tools: iMovie, Windows Video Editor, CapCut)
+         - Keep it positive and energetic!
+         
+         ============================================================================= 
+         
+         VIDEO EMBEDDING: YOU HAVE 3 OPTIONS
+         Choose what works best for your team:
+         
+         ═══════════════════════════════════════════════════════════════════════════
+         OPTION 1: YOUTUBE (MOST RECOMMENDED)
+         ═══════════════════════════════════════════════════════════════════════════
+         
+         PROS:
+         ✓ Easiest and most reliable
+         ✓ Free, unlimited hosting
+         ✓ Works on all devices automatically
+         ✓ One team member uploads, everyone uses same link
+         ✓ Can be unlisted (only people with link can see it)
+         
+         CONS:
+         ✗ Requires one team member to have/create YouTube account
+         ✗ Video is hosted on YouTube platform
+         
+         FILE FORMATS YouTube accepts:
+         - MP4 (most common, highly recommended)
+         - MOV (iPhone default)
+         - AVI (Windows)
+         - WMV (Windows)
+         - Many others
+         
+         UPLOAD STEPS:
+         1. Have ONE team member upload video to YouTube
+         2. Set visibility to "Unlisted" (recommended) or "Public"
+         3. Click "Share" → "Embed" → Copy iframe code
+         4. Share the embed code with all team members
+         5. Everyone pastes the SAME embed code on their discover-umd.html page
+         
+         RECOMMENDED VIDEO SETTINGS for upload:
+         - Resolution: 1920x1080 (1080p) or 1280x720 (720p)
+         - Frame rate: 30fps or 60fps
+         - Format: MP4 (H.264 codec)
+         - Length: 30 seconds or longer
+         - File size: YouTube handles up to 128GB, but yours will be small (under 100MB)
+         
+         
+         ═══════════════════════════════════════════════════════════════════════════
+         OPTION 2: VIMEO (PROFESSIONAL ALTERNATIVE)
+         ═══════════════════════════════════════════════════════════════════════════
+         
+         PROS:
+         ✓ More professional appearance
+         ✓ No ads
+         ✓ Cleaner embed player
+         ✓ Privacy options (password protect if desired)
+         
+         CONS:
+         ✗ Free tier has weekly upload limits (500MB/week, 5GB total)
+         ✗ Slightly more complex than YouTube
+         
+         FILE FORMATS Vimeo accepts:
+         - MP4 (recommended)
+         - MOV
+         - AVI
+         - WMV
+         - Many others
+         
+         UPLOAD STEPS:
+         1. Create free Vimeo account
+         2. Upload 30+ second video
+         3. Get embed code from video page
+         4. Share with teammates
+         
+         
+         ═══════════════════════════════════════════════════════════════════════════
+         OPTION 3: SELF-HOSTED HTML5 VIDEO (ADVANCED)
+         ═══════════════════════════════════════════════════════════════════════════
+         
+         PROS:
+         ✓ Complete control over video
+         ✓ No external platform needed
+         ✓ Works with GitHub Pages, Netlify, Vercel
+         
+         CONS:
+         ✗ Larger files slow down your website
+         ✗ Need to host video file (adds to repository size)
+         ✗ Browser compatibility requires multiple formats
+         ✗ Each team member needs to host their own copy
+         
+         RECOMMENDED ONLY IF:
+         - Your team is comfortable with file hosting
+         - You're using GitHub Pages/Netlify/Vercel
+         - File size is under 25MB
+         
+         FILE FORMATS for HTML5 video:
+         - MP4 (H.264 codec) - REQUIRED for Safari and most browsers
+         - WebM (VP9 codec) - OPTIONAL but recommended (smaller files, modern browsers)
+         
+         RECOMMENDED SPECS:
+         - Length: 30 seconds or longer
+         - Resolution: 1920x1080 (1080p) or 1280x720 (720p)
+         - Frame rate: 30fps
+         - Bitrate: 5-8 Mbps for 1080p, 2.5-4 Mbps for 720p
+         - Codec: H.264 for MP4
+         - Target size: Under 25MB if possible
+         
+         COMPRESSION/CONVERSION TOOLS:
+         - HandBrake (free, desktop): handbrake.fr
+           - Open video → Format: MP4 → Preset: "Fast 1080p30" → Start
+         - FFmpeg (command line, free)
+         - Online: CloudConvert.com, FreeConvert.com
+         
+         CREATING WebM from MP4 (optional but good for file size):
+         - HandBrake: Format: WebM → Preset: "Gmail Medium 5 Minutes 720p30"
+         - Online converters
+         
+         HOSTING OPTIONS:
+         - GitHub Pages: Works fine, just adds to repo size
+         - Netlify/Vercel: Excellent for larger files
+         - DO NOT use Dropbox/Google Drive direct links (not reliable)
+         
+         ============================================================================= -->
+    <section class="team-video">
+        <div class="container">
+            <h2>Team UMD Video</h2>
+            <p>Watch our 30+ second promotional video showcasing what makes UMD special!</p>
+
+            <div class="video-container">
+
+                <!-- =====================================================================
+                     SAMPLE VIDEO (Replace with YOUR TEAM'S video!)
+                     =====================================================================
+                     A sample video is included so you can see how it looks.
+                     You MUST replace this with YOUR TEAM'S 30+ second UMD video.
+                     ALL 5 team members should use the SAME video!
+                     
+                     You have 3 options for your team video:
+                     
+                     OPTION 1: YOUTUBE (RECOMMENDED - EASIEST)
+                     - ONE team member uploads your 30+ second video to YouTube
+                     - Click "Share" > "Embed" > Copy the iframe code
+                     - Share embed code with all team members
+                     - Replace the <video> tag below with your YouTube iframe
+                     - Example:
+                       <iframe width="560" height="315" 
+                               src="https://www.youtube.com/embed/YOUR_TEAM_VIDEO_ID" 
+                               title="Team UMD Marketing Video" frameborder="0"
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                               allowfullscreen>
+                       </iframe>
+                     
+                     OPTION 2: VIMEO
+                     - Upload to vimeo.com, get embed code
+                     - Replace the <video> tag below with Vimeo iframe
+                     
+                     OPTION 3: SELF-HOSTED (current setup)
+                     - Replace videos/sample-campus.mp4 with YOUR team's video file
+                     - Each team member needs their own copy of the file
+                     - Provide BOTH MP4 and WebM for best browser compatibility
+                     ===================================================================== -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9LoS4alkRTA?si=vZR7AP7G-rtkliaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+
+                <!-- =====================================================================
+                     AUDIO EMBEDDING BONUS EXAMPLES
+                     =====================================================================
+                     Not required for this project, but here's how to embed audio
+                     if you wanted to add music, podcast, or audio narration
+                     ===================================================================== -->
+                <!--
+                AUDIO OPTION 1: HTML5 AUDIO ELEMENT
+                <audio controls>
+                    <source src="audio/background-music.mp3" type="audio/mpeg">
+                    <source src="audio/background-music.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                AUDIO FILE FORMATS:
+                - MP3: Most compatible, works in all browsers (recommended)
+                - OGG: Smaller file size, works in modern browsers
+                - WAV: Uncompressed, large files (avoid for web)
+                
+                AUDIO ATTRIBUTES:
+                - controls: Shows play/pause/volume controls
+                - autoplay: Starts playing automatically (annoying, don't use)
+                - loop: Repeats when finished
+                - muted: Starts muted (use with autoplay)
+                
+                AUDIO OPTION 2: SoundCloud EMBED
+                <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                        src="https://w.soundcloud.com/player/?url=YOUR_TRACK_URL">
+                </iframe>
+                
+                AUDIO OPTION 3: Spotify EMBED
+                <iframe src="https://open.spotify.com/embed/track/TRACK_ID" 
+                        width="300" height="80" frameborder="0" allowtransparency="true">
+                </iframe>
+                -->
+
+            </div>
+
+            <div class="video-credits">
+                <p><strong>Video Credits:</strong> Created by Veda Baumann, Campbell Arndt, and Karley Mesenbring</p>
+                <!-- List all your team members! -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================================
+         WHY I CHOSE UMD
+         =============================================================================
+         REQUIRED (Part of 5 pts for Discover UMD Page):
+         - Explain why you chose to attend UMD
+         - Be personal and genuine
+         - 3-5 specific reasons
+         
+         IDEAS TO DISCUSS:
+         - Academic programs (LSBE, specific major)
+         - Location (Duluth, Lake Superior, outdoor activities)
+         - Campus size (smaller, closer community)
+         - Affordability/value
+         - Distance from home (far enough/close enough)
+         - Campus culture and environment
+         - Specific opportunities (study abroad, internships, research)
+          - Faculty and class sizes
+         ============================================================================= -->
+    <section class="why-umd">
+        <div class="container">
+            <h2>Why I Chose UMD</h2>
+
+            <div class="reasons-grid">
+               
+                <div class="reason-card">
+                    <h3>The Duluth Area</h3>
+                    <p>
+                        The first time I visited Duluth I was 10 years old and I immediately fell in love with Lake Supurior. When I came back to tour UMD in high school, my mom and I got chances to explore the area a little more and I found that Duluth area is beautiful. Not only is the area beautiful, but the people here are amazing too. I love Duluth!
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <h3>Campus Size</h3>
+                    <p>
+                        When I was looking at colleges, I knew I wanted to go to a smaller school, but not too small. I wanted to be able to have a close community and be able to get to know new people as well. UMD is the perfect size for me. It's not too big where I would feel lost, but it's also not too small where I wouldn't have any opportunities. Also being indoors for the winters is very nice walking to classes instead of outside.
+                    </p>
+                </div>
+
+                <div class="reason-card">
+                    <h3>Dance Team</h3>
+                    <p>
+                        I have always been passionate about dance, and being able to join the UMD Dance Team was a major factor in my decision to attend. I wanted to continue my dancing career at a collegiate level and I am so grateful that UMDDT has given me that opportunity.The team is incredibly supportive and provides a great outlet for my creativity and love of performance. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================================
+         WHAT I LOVE ABOUT DULUTH
+         =============================================================================
+         REQUIRED (Part of 5 pts for Discover UMD Page):
+         - Share what you enjoy about the city of Duluth
+         - Highlight local attractions, culture, outdoor activities
+         - Make it appealing to prospective students!
+         
+         DULUTH HIGHLIGHTS TO POTENTIALLY MENTION:
+         - Lake Superior and waterfront
+         - Aerial Lift Bridge (iconic)
+         - Canal Park area
+         - Hiking trails (Hawk Ridge, Hartley Nature Center, Superior Hiking Trail)
+         - Skiing (Spirit Mountain)
+         - Local restaurants and breweries
+         - Arts and culture scene
+         - Outdoor recreation year-round
+         - Small city feel with big city amenities
+         - Beautiful scenery and nature access
+         ============================================================================= -->
+    <section class="love-duluth">
+        <div class="container">
+            <h2>What I Love About Duluth</h2>
+            <p class="intro">
+                Duluth has offered me many fun experiences and opportunities to explore the area. I have found so many fun things to do here while attending UMD. One thing we did a lot more this fall was bike around. We would bike to various sites around Duluth. We would find rivers and trails to go on. Another thing I love to do is to get ice cream and walk along the lake around sunset time. It's just unreal how beautiful the lake with the city look together. 
+                <!-- EXAMPLE (DELETE and write your own):
+                     Duluth offers the perfect blend of natural beauty and urban amenities. Living just 
+                     blocks from Lake Superior means I can study outdoor during nice weather or take a 
+                     break with a lakefront walk. The city's vibrant downtown area has great restaurants 
+                     and coffee shops perfect for meeting friends or working on group projects. Plus, the 
+                     outdoor recreation opportunities - from hiking in summer to skiing in winter - make 
+                     Duluth an ideal place for students who love an active lifestyle.
+                 -->
+            </p>
+        </div>
+    </section>
+
+    <!-- =============================================================================
+         CAMPUS HIGHLIGHTS & IMAGES
+         =============================================================================
+         REQUIRED (Part of 5 pts for Discover UMD Page):
+         - Pictures of campus/Duluth area
+         - Campus highlights and experiences
+         - Showcase favorite locations, buildings, or spots
+         
+         IMAGE REQUIREMENTS:
+         - Multiple images of campus and/or Duluth
+         - FILE FORMATS: .jpg (photos), .png (if needed)
+         - SIZE: 800x600px or larger
+         - FILE SIZE: Under 500KB each
+         
+         WHAT TO PHOTOGRAPH:
+         Campus:
+         - Iconic buildings (Library, Kirby Student Center, LSBE building)
+         - Outdoor spaces (green areas, walking paths)
+         - Study spots you love
+         - Athletic facilities
+         - Campus landmarks
+         
+         Duluth:
+         - Lake Superior views
+         - Aerial Lift Bridge
+         - Canal Park
+         - Local favorites (restaurants, parks, trails)
+         - Seasonal beauty (fall colors, winter snow)
+         
+         PHOTOGRAPHY TIPS:
+         - Good lighting (golden hour is best: early morning or late afternoon)
+         - Clear, focused shots
+         - Variety of angles and perspectives
+         - Include people for scale and life (with permission)
+         ============================================================================= -->
+    <section class="campus-highlights">
+        <div class="container">
+            <h2>Campus & City Highlights</h2>
+
+            <div class="highlights-grid">
+
+                <div class="highlight-card">
+                    <img src="images/fa46dc-20240129-umd-03-600.jpg" alt="Kirby Student Center">
+                    <!-- ^^^ REPLACE with YOUR campus/Duluth photo
+                         Update alt text to describe what's in the image
+                     -->
+                    <h3>Kirby Student Center</h3>
+                    <!-- ^^^ Replace with location name
+                         Examples: "Kathryn A. Martin Library", "Lake Superior Waterfront", 
+                                   "Spirit Mountain", "Kirby Student Center"
+                     -->
+                    <p>
+                        This is my favorite place to study on campus by far. There are also always various activites and things going on there.
+                    </p>
+                </div>
+                <div class="highlight-card">
+                    <img src="images/IMG_4453.jpeg" alt="The Lift Bridge">
+                    <h3>The Lift Bridge</h3>
+                    <p>
+                        This is one of the most iconic landmarks in Duluth. The Aerial Lift Bridge is a historic suspension bridge that spans the Saint Louis River.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <img src="images/unnamed.jpeg" alt="Amsoil Arena">
+                    <h3>Amsoil Arena</h3>
+                    <p>
+                        Amsoil Arena is the home of UMD's hockey teams and is a great place to catch a game. The atmosphere is always electric, and it's a fantastic way to experience school spirit and support our teams.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <img src="images/IMG_3598.jpeg" alt="Portlands Malt Shoppe">
+                    <h3>Portlands Malt Shoppe</h3>
+                    <p>
+                        This is my favorite spot by the lake to get a sweet treat. Their malts are maybe the best malts I have ever had.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================================================
+         STUDENT EXPERIENCE NARRATIVE (OPTIONAL but recommended)
+         =============================================================================
+         Share your personal UMD experience - makes the page more engaging
+         ============================================================================= -->
+    <!-- =============================================================================
+         UMD QUICK FACTS (OPTIONAL)
+         =============================================================================
+         Provide useful information for prospective students
+         ============================================================================= -->
+    <section class="umd-facts">
+        <div class="container">
+            <h2>UMD Quick Facts</h2>
+            <div class="facts-grid">
+                <div class="fact">
+                    <h4>Founded</h4>
+                    <p>1947</p>
+                </div>
+                <div class="fact">
+                    <h4>Students</h4>
+                    <p>~10,000</p>
+                </div>
+                <div class="fact">
+                    <h4>Location</h4>
+                    <p>Duluth, MN</p>
+                </div>
+                <div class="fact">
+                    <h4>Colors</h4>
+                    <p>Maroon & Gold</p>
+                </div>
+            </div>
+
+            <div class="umd-links">
+                <h3>Learn More About UMD</h3>
+                <ul>
+                    <li><a href="https://www.d.umn.edu/" target="_blank">UMD Homepage</a></li>
+                    <li><a href="https://lsbe.d.umn.edu/" target="_blank">Labovitz School of Business & Economics</a>
+                    </li>
+                    <li><a href="https://www.d.umn.edu/goto/admissions" target="_blank">Admissions</a></li>
+                    <li><a href="https://www.d.umn.edu/goto/visit" target="_blank">Visit Campus</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Veda Baumann. MIS 2201 - Spring 2026</p>
+            <p>University of Minnesota Duluth</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+<!-- ==================================================================================
+     SUBMISSION CHECKLIST FOR discover-umd.html (Discover UMD Page)
+     ==================================================================================
+     
+     Before submitting, verify YOU HAVE:
+     
+     TEAM VIDEO (8 POINTS - CRITICAL!):
+     ✓ 30+ second team UMD marketing video created
+     ✓ Video is embedded on this page (not just linked)
+     ✓ ALL 5 team members are using the SAME video
+     ✓ Video plays correctly when page loads
+     ✓ Video promotes UMD effectively
+     
+     PAGE CONTENT (5 POINTS):
+     ✓ Explained why you chose UMD (3-4 specific reasons)
+     ✓ Described what you love about Duluth
+     ✓ Included multiple pictures of campus/Duluth
+     ✓ Highlighted specific campus locations
+     ✓ Replaced ALL placeholder text with YOUR content
+     ✓ Replaced ALL placeholder images with YOUR photos
+     ✓ All images have descriptive alt text
+     
+     GENERAL:
+     ✓ Tested page in browser (desktop and mobile)
+     ✓ All navigation links work
+     ✓ Video plays on different devices
+     ✓ Images load correctly
+     ✓ No "localhost" references
+     
+     GRADING BREAKDOWN:
+     - Page Content: 5 points (reasons for UMD, Duluth highlights, campus images)
+     - Team Video: 8 points (quality, creativity, integration)
+     - TOTAL: 13 points (largest impact of any single page!)
+     
+     COMMON MISTAKES TO AVOID:
+     ✗ Video is not embedded (just linked) - Will lose points!
+     ✗ Video is under 30 seconds - Does not meet requirements!
+     ✗ Team members using different videos - Should all be the same!
+     ✗ Video doesn't play/broken link - Test before submitting!
+     ✗ Generic "UMD is great" without specific reasons - Be specific!
+     ✗ No campus/Duluth images - Required!
+     
+     VIDEO FILE FORMAT REMINDER:
+     If using YouTube/Vimeo:
+     - Upload MP4, MOV, or AVI
+     - 30 seconds or longer
+     - Good quality (720p or 1080p)
+     - Clear audio
+     
+     If self-hosting:
+     - Primary: MP4 (H.264 codec)
+     - Optional: WebM for smaller file size
+     - Keep under 25MB if possible
+     - Test on multiple browsers
+     
+     ================================================================================== -->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veda - About Me, hobbies, interests, career goals">
+    <title>Veda Baumann - Game | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            background-color: #ffffff; 
+            color: #a63875; 
+        }
+        #gameCanvas { 
+            background-color: #ffffff; 
+            border: 4px solid #a63875; 
+        }
+        .piece-container { 
+            display: flex; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo/Your Name (links to home) -->
+            <div class="logo">
+                <a href="index.html">
+                    <!-- ACTION REQUIRED: Replace [YOUR NAME] with your actual name -->
+                    Veda Baumann
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="discover-umd.html">Discover UMD</a></li>
+                <!-- OPTIONAL: If you do the extra credit game page, add link here -->
+                <li><a href="game.html">Game</a></li>
+            </ul>
+
+            <!-- Hamburger Menu Icon (for mobile - handled by JavaScript) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <h1 style="color: rgb(173, 41, 77);">Block Blast</h1>
+    <p style="color: rgb(255, 180, 208);">*TIP* Drag the block to the most left corner to place the block most accuratly! Have Fun!
+    </p>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="piece-container" id="pieces"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
